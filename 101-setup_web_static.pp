@@ -25,7 +25,7 @@ $nginx_conf = "server{
 }"
 
 exec { 'update':
-  command => '/usr/bin/pat-get update',
+  command => '/usr/bin/apt-get update',
 }
 
 package { 'nginx':
