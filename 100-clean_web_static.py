@@ -12,7 +12,7 @@ env.hosts = ['107.22.146.121', '52.91.133.213']
 def do_clean(number=0):
     """ Deletes out-of-date archive
     If number is 0 or 1, keep only the most recent archive
-    If number is 2, kepp the most and second-most recent archives
+    If number is 2, keep the most and second-most recent archives
     """
     number = 1 if int(number) == 0 else int(number)
 
