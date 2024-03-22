@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Starting a Flask web application
 The app must be listening on 0.0.0.0:5000
+
 Routes:
     /:display "Hello HBNB!"
 """
@@ -16,4 +17,4 @@ def hello_hbnb():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)
