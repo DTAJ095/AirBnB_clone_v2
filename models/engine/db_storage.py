@@ -46,9 +46,9 @@ class DBStorage():
                 key = "{}.{}".format(type(elem).__name__, elem.id)
                 dic[key] = elem
         else:
-            lista = [State, City, User, Place, Review, Amenity]
-            for clase in lista:
-                query = self.__session.query(clase)
+            m_list = [State, City, User, Place, Review, Amenity]
+            for _class in m_list:
+                query = self.__session.query(_class)
                 for elem in query:
                     key = "{}.{}".format(type(elem).__name__, elem.id)
                     dic[key] = elem

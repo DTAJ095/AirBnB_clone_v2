@@ -6,7 +6,8 @@ Routes:
     /hbnb: display “HBNB”
     /c/<text>: display “C ” followed by the value of the text variable
        (replace underscore _ symbols with a space )
-    /python/<text>: display “Python ”, followed by the value of the text variable
+    /python/<text>: display “Python ”,
+    followed by the value of the text variable
 """
 from flask import Flask
 
@@ -18,16 +19,19 @@ def hello_hbnb():
     """ Displays Hello HBNB! """
     return "Hello HBNB!"
 
+
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """ Displays HBNB """
     return "HBNB"
+
 
 @app.route("/c/<text>", strict_slashes=False)
 def display_c(text):
     """ display “C ” followed by the value of the text variable """
     text = text.replace("_", " ")
     return ("C {}".format(text))
+
 
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
@@ -40,4 +44,4 @@ def display_py(text="is cool"):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)

@@ -3,7 +3,7 @@
 The app must be listening on 0.0.0.0:5000
 Routes:
     /:display "Hello HBNB!"
-    /hbnb: display “HBNB” 
+    /hbnb: display “HBNB”
 """
 from flask import Flask
 
@@ -15,6 +15,7 @@ def hello_hbnb():
     """ Displays Hello HBNB! """
     return ("Hello HBNB!")
 
+
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """ Displays HBNB """
@@ -22,4 +23,4 @@ def hbnb():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)
