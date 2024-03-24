@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title>AirBnB clone</title>
+        </head>
+    <body>
+        <h1> States </h1>
+        <ul>
+            {% for state in states|sort(attribute='name') %}
+            <li>State:{{ state.id }}: <b>{{ state.name }}</b>
+                    <ul>
+                            {% for city in state.cities|sort(attribute='name') %}
+                            <li> City:{{ city.id }}: <b>{{ city.name }}</b></li>
+                            {% endfor %}
+
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
